@@ -1,12 +1,15 @@
+body {
+    max-width: 1200px;
+    margin: auto;
+}
+
 .container {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .squareDiv {
     border: 1px solid black;
-    height: 116px;
-    width: 116px;
     background-color: rgb(255, 0, 106);
 }
