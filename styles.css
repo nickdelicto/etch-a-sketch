@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.squareDiv {
+    border: 1px solid black;
+    height: 116px;
+    width: 116px;
+}
