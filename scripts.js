@@ -1,10 +1,11 @@
 const containerDiv = document.querySelector('.container');
-
-const button = document.querySelector('#generate');
+const genButton = document.querySelector('#generate');
+const eraseButton = document.querySelector('#erase');
+const clearButton = document.querySelector('#clear');
 
 let squares;
 
-button.addEventListener('click', () => {
+genButton.addEventListener('click', () => {
     
     do {
         squares = +prompt('Canvas size?');
@@ -25,6 +26,17 @@ button.addEventListener('click', () => {
         squareDiv.addEventListener('mouseover', (e) => {
             e.target.style.backgroundColor = 'black';
         });
-        containerDiv.appendChild(squareDiv);    
-    }  
+        containerDiv.appendChild(squareDiv);
+        
+        eraseButton.addEventListener('click', () => {
+            squareDiv.addEventListener('mouseover', (e) => {
+                e.target.style.backgroundColor = 'white';
+            });
+        });      
+    }
 });
+
+
+/*clearButton.addEventListener('click', () => {
+    squareDiv.setAttribute('style', 'background-color: white');
+});*/
