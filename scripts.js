@@ -32,7 +32,11 @@ genButton.addEventListener('click', () => {
             squareDiv.addEventListener('mouseover', (e) => {
                 e.target.style.backgroundColor = 'white';
             });
-        });      
+        });
+        
+        clearButton.addEventListener('click', () => {
+            squareDiv.style.backgroundColor = 'white';
+        });
     }
 });
 
