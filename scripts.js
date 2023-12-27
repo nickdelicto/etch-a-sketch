@@ -2,6 +2,10 @@ const containerDiv = document.querySelector('.container');
 const genButton = document.querySelector('#generate');
 const eraseButton = document.querySelector('#erase');
 const clearButton = document.querySelector('#clear');
+const yellowButton = document.querySelector('#yellow');
+const blueButton = document.querySelector('#blue');
+const greenButton = document.querySelector('#green');
+const brownButton = document.querySelector('#brown');
 
 let squares;
 
@@ -25,9 +29,44 @@ genButton.addEventListener('click', () => {
         
         squareDiv.addEventListener('mouseover', (e) => {
             e.target.style.backgroundColor = 'black';
+            e.target.classList.add('hovered');
         });
         containerDiv.appendChild(squareDiv);
-        
+
+        yellowButton.addEventListener('click', () => {
+            for (let i = 0; i < squares * squares; i++) {
+                if (!squareDiv.classList.contains('hovered')) {
+                    squareDiv.style.backgroundColor = 'yellow';
+                }
+            }
+        });
+
+
+        blueButton.addEventListener('click', () => {
+            for (let i = 0; i < squares * squares; i++) {
+                if (!squareDiv.classList.contains('hovered')) {
+                    squareDiv.style.backgroundColor = 'blue';
+                }
+            }
+        });
+
+        greenButton.addEventListener('click', () => {
+            for (let i = 0; i < squares * squares; i++) {
+                if (!squareDiv.classList.contains('hovered')) {
+                    squareDiv.style.backgroundColor = 'green';
+                }
+            }
+        });
+
+        brownButton.addEventListener('click', () => {
+            for (let i = 0; i < squares * squares; i++) {
+                if (!squareDiv.classList.contains('hovered')) {
+                    squareDiv.style.backgroundColor = 'brown';
+                }
+            }
+        });
+
+
         eraseButton.addEventListener('click', () => {
             squareDiv.addEventListener('mouseover', (e) => {
                 e.target.style.backgroundColor = 'white';
