@@ -1,14 +1,19 @@
 const containerDiv = document.querySelector('.container');
 
-const button = document.querySelector('button');
+const button = document.querySelector('#generate');
 
 let squares;
 
 button.addEventListener('click', () => {
-    containerDiv.innerHTML = '';
+    
     do {
-        squares = +prompt('how many squares do you want for each side of the grid?');
+        squares = +prompt('how many squares for each side of the grid?');
+        if (squares > 100) {
+            alert('Must be 100 or less! Generate again.');
+        }
     } while (squares > 100);
+
+    containerDiv.innerHTML = '';
 
     for (let j = 0; j < squares * squares; j++) {
         const squareDiv = document.createElement('div');
