@@ -10,16 +10,15 @@ button.addEventListener('click', () => {
         squares = +prompt('how many squares do you want for each side of the grid?');
     } while (squares > 100);
 
-    for (let i = 0; i < squares; i++) {
-        for (let j = 0; j < squares; j++) {
-            const squareDiv = document.createElement('div');
-            squareDiv.setAttribute('class', 'squareDiv');
-            squareDiv.addEventListener('mouseover', (e) => {
-                e.target.setAttribute('style', 'background-color: yellow;');
-            });
-            containerDiv.appendChild(squareDiv);    
-        }  
-    }
+    for (let j = 0; j < squares * squares; j++) {
+        const squareDiv = document.createElement('div');
+        squareDiv.setAttribute('class', 'squareDiv');            
+        squareDiv.setAttribute('style', `flex: 1 0 ${100 / squares}%;`);
+        squareDiv.addEventListener('mouseover', (e) => {
+            e.target.style.backgroundColor = 'yellow';
+        });
+        containerDiv.appendChild(squareDiv);    
+    }  
 });
 
 
