@@ -42,7 +42,8 @@ button {
     border-radius: 4px;
     font-family:'Courier New', Courier, monospace;
     padding: 2px 8px;
-    background-color: #eee;
+    background-color: black;
+    color: yellow;
     margin: 10px;
     font-size: medium;
 }
@@ -81,9 +82,13 @@ button {
     border-end-start-radius: 10px;
     border-end-end-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
     padding: 10px;
     box-sizing: border-box;
 }
 
-
+.controls button {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 4px 12px;
+}
