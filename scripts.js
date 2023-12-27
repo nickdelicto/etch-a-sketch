@@ -7,8 +7,10 @@ let squares;
 button.addEventListener('click', () => {
     
     do {
-        squares = +prompt('how many squares for each side of the grid?');
-        if (squares > 100) {
+        squares = +prompt('Canvas size?');
+        if (!Number.isInteger(squares)) {
+            alert('Only integer numbers accepted! Generate again.');
+        } else if (squares > 100) {
             alert('Must be 100 or less! Generate again.');
         }
     } while (squares > 100);
