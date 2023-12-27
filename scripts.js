@@ -13,15 +13,11 @@ button.addEventListener('click', () => {
     for (let j = 0; j < squares * squares; j++) {
         const squareDiv = document.createElement('div');
         squareDiv.setAttribute('class', 'squareDiv');            
-        squareDiv.setAttribute('style', `flex: 1 0 ${100 / squares}%;`);
+        squareDiv.setAttribute('style', `flex: 0 0 ${100 / squares}%;`);
+        
         squareDiv.addEventListener('mouseover', (e) => {
-            e.target.style.backgroundColor = 'yellow';
+            e.target.style.backgroundColor = 'black';
         });
         containerDiv.appendChild(squareDiv);    
     }  
 });
-
-
-
-
-
