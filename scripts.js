@@ -1,6 +1,5 @@
 const containerDiv = document.querySelector('.container');
 const genButton = document.querySelector('#generate');
-const eraseButton = document.querySelector('#erase');
 const clearButton = document.querySelector('#clear');
 const yellowButton = document.querySelector('#yellow');
 const blueButton = document.querySelector('#blue');
@@ -44,7 +43,7 @@ genButton.addEventListener('click', () => {
 
         blueButton.addEventListener('click', () => {
             for (let i = 0; i < squares * squares; i++) {
-                if (!squareDiv.classList.contains('hovered')) {
+                if (!squareDiv.classList.contains('hovered', 'blue-background')) {
                     squareDiv.style.backgroundColor = 'blue';
                 }
             }
@@ -65,21 +64,10 @@ genButton.addEventListener('click', () => {
                 }
             }
         });
-
-
-        eraseButton.addEventListener('click', () => {
-            squareDiv.addEventListener('mouseover', (e) => {
-                e.target.style.backgroundColor = 'white';
-            });
-        });
         
         clearButton.addEventListener('click', () => {
+            squareDiv.classList.remove('hovered');
             squareDiv.style.backgroundColor = 'white';
         });
     }
 });
-
-
-/*clearButton.addEventListener('click', () => {
-    squareDiv.setAttribute('style', 'background-color: white');
-});*/
