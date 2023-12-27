@@ -14,10 +14,10 @@ genButton.addEventListener('click', () => {
         squares = +prompt('Canvas size?');
         if (!Number.isInteger(squares)) {
             alert('Only integer numbers accepted! Generate again.');
-        } else if (squares > 100) {
-            alert('Must be 100 or less! Generate again.');
+        } else if (squares > 50) {
+            alert('Must be 50 or less! Generate again.');
         }
-    } while (squares > 100);
+    } while (squares > 50);
 
     containerDiv.innerHTML = '';
 
