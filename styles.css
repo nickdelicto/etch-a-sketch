@@ -13,7 +13,7 @@ body {
 
 .squareDiv {
     outline: 1px solid black;
-    background-color: rgb(224, 217, 217);
+    background-color: white;
 }
 
 .squareDiv::before {
