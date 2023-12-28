@@ -27,7 +27,7 @@ change the background color of the non-hovered part of the grid
 - DOM manipulation: dynamically creating child elements and appending to parent
 - Using JavaScript to style elements
 - Using JavaScript to add/remove class using element.classList.add/remove() functions
-- Using eventListerners)
+- Using eventListerners
 - Using loops
 - CSS Flexbox model: Using CSS & JS to create perfect square grids without clipping/overflowing squares)
 
